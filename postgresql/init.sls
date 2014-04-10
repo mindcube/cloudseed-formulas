@@ -4,11 +4,7 @@
 {% set users = salt['pillar.get']('postgresql:users', {}) %}
 
 include:
-{% if grains['os_family'] == 'Debian' %}
- - postgresql.debian
-{% elif grains['os_family'] == 'RedHat' %}
- - postgresql.redhat
-{% endif %}
+
 
 postgresql.core:
   pkg:
