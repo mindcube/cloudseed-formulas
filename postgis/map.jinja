@@ -1,0 +1,8 @@
+{% set postgis = salt['grains.filter_by']({
+    'Debian': {
+        'package': 'postgresql-9.1-postgis',
+    },
+    'RedHat': {
+        'package': 'postgresql-9.1-postgis',
+    },
+}, merge=salt['pillar.get']('postgis:lookup')) %}
