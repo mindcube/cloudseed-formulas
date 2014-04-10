@@ -23,6 +23,14 @@ base:
     - match: grain
     - postgresql
 
+  'roles:postgis':
+    - match: grain
+    - postgis
+
+  'roles:geo':
+    - match: grain
+    - geo
+
   'roles:node':
     - match: grain
     - node
